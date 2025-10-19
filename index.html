@@ -1,11 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="nl" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Docs</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study Buddy – Help</title>
+  <meta name="description" content="Zoek hulp of kies een rol: Developer, Leerling of School." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Study Buddy <span style="opacity:.65">Help</span></span>
+      </a>
+      <a class="btn" href="/" aria-label="Naar de app">Naar de app ↗</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Waarmee kunnen we je helpen?</h1>
+      <p>Zoek naar een onderwerp of kies je rol hieronder.</p>
+      <div class="search" id="zoek">
+        <svg class="magnifier" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm10 2-6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <input id="searchInput" type="search" placeholder="Bijv. inloggen, PWA, privacy…" aria-label="Zoeken" />
+        <span class="kbd">/</span>
+      </div>
+    </section>
+
+    <section class="cards" aria-label="Kies een rol">
+      <a class="card" href="/docs/dev">
+        <div class="icon" style="background:linear-gradient(135deg,#9b8cff,var(--blue))"></div>
+        <h3>Developer</h3>
+        <span class="pill">API · Webhooks · Integraties</span>
+      </a>
+
+      <a class="card" href="/docs/leerling">
+        <div class="icon" style="background:linear-gradient(135deg,var(--yellow),#ffe8a8)"></div>
+        <h3>Leerling</h3>
+        <span class="pill">Inloggen · App (PWA) · Meldingen</span>
+      </a>
+
+      <a class="card" href="/docs/school">
+        <div class="icon" style="background:linear-gradient(135deg,var(--green),#7ee0a7)"></div>
+        <h3>School</h3>
+        <span class="pill">Implementatie · SSO · Privacy</span>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Study Buddy</div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
