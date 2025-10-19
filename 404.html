@@ -1,12 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Docs - 404</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 – Pagina niet gevonden | Study Buddy</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      background: var(--bg);
+    }
+    h1 {
+      font-size: clamp(64px, 10vw, 120px);
+      line-height: 1;
+      margin: 0;
+      color: var(--blue);
+    }
+    h2 {
+      margin-top: 10px;
+      color: var(--text);
+      font-size: 1.6rem;
+    }
+    p {
+      color: var(--muted);
+      max-width: 400px;
+      margin: 16px auto;
+    }
+    .btn404 {
+      background: var(--blue);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .btn404:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(74,144,226,.4);
+    }
+    .emoji {
+      font-size: 3rem;
+      margin-top: 12px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+  </style>
 </head>
 <body>
-    <h1>404</h1>
-    <p>Oepsie, deze pagina is niet gevonden.</p>
+  <h1>404</h1>
+  <h2>Oeps! Pagina niet gevonden 😅</h2>
+  <p>Het lijkt erop dat je een verkeerd pad hebt genomen.<br>Misschien kan Study Buddy je de weg wijzen?< /p>
+  <div class="emoji">🧭</div>
+  <button class="btn404" onclick="window.location.href='index.html'">
+    Terug naar Help-homepage
+  </button>
 </body>
 </html>
